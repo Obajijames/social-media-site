@@ -1,0 +1,312 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1vw;
+}
+/* page layout and outlook */
+section,main,article,aside,footer{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+.container{
+    height: fit-content;
+    background-color: peachpuff;
+    display: grid;
+    grid-template-areas: 
+    'section article aside'
+    'main article aside'
+    'main footer aside'
+    ;
+    grid-template-columns: 2fr 2fr 1fr;
+}
+/* grid areas/layout styling */
+section{
+    grid-area: section;
+    margin: 20px 10px 10px;
+    padding: 20px;
+}
+main{
+    grid-area: main;
+    margin: 10px 10px 10px;
+    padding: 20px;
+}
+article{
+    grid-area: article;
+    margin: 20px 10px 20px 10px;
+    padding: 20px;
+}
+aside{
+    grid-area: aside;
+    margin: 20px 5px 10px;
+    padding: 20px;
+}
+footer{
+    grid-area: footer;
+    margin: 5px 10px 10px;
+    padding: 80px 20px 100px 20px;
+}
+
+/* styling the menu bar - appearance and display */
+nav{
+    background: indigo;
+    /* width: 100%; */
+}
+nav .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+}
+/* controls margin top of submenu from menu */
+nav .navbar .nav-links{
+    line-height: 70px;
+    height: 100%;
+}
+/* makes nav bar links appear in column format */
+nav .navbar .links{
+    display: flex;
+}
+nav .navbar .links li{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0 14px;
+}
+/* Position menu, dropdown menu and hide sub-menus */
+nav .navbar .links li .sub-menu{
+    position: absolute;
+    top: 70px;
+    line-height: 40px;
+    background: indigo;
+    border-radius: 0 0 4px 4px;
+    display: none;
+}
+nav .navbar .links li:hover .services-sub-menu{
+  display: block;
+}
+.services-sub-menu li:hover{
+    background-color:  rgb(11, 235, 11);
+}
+.navbar .links li .sub-menu li{
+    padding: 0 22px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.navbar .links li .sub-menu a,
+.navbar .links li a{
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+}
+.navbar .links li .sub-menu .linux-sub-menu{
+    top: 0;
+    left: 100%;
+    border-radius: 0 4px 4px 4px;
+    display: none;
+}
+.links li .sub-menu .linux:hover .linux-sub-menu{
+    display: block;
+}
+.navbar h1{
+    color: rgb(11, 235, 11);
+}
+
+/* image styling */
+/* Resizing every display picture in the code */
+img.thumbnail{
+    width: 50px;
+    border-radius: 50px;
+}
+/* styling major images */
+img{
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+}
+
+/* section styling: text, input... */
+section,.post,h3{
+    padding-bottom: 25px;
+}
+a{
+    text-decoration: none;
+    color: blue;
+}
+input{
+    width: fit-content;
+    padding: 10px;
+    border-radius: 20px;
+    border: solid 1px rgb(187, 182, 182);
+    box-shadow: 5px 0.5px 10px 0.5px black;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bottom{
+    margin-top: 20px;
+}
+.pro{
+    display: flex;
+}
+.pro h2{
+    color: black;
+    margin-top: 20px;
+    font-size: 1vw;
+}
+/* style entire span on page i.e title/date */
+span{
+    font-size: 10px;
+    color: grey;
+    text-align: left;
+}
+/* aid responsiveness of sight pn different devices/screen */
+.centre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    margin-top: 10px;
+}
+/* table content styling */
+td{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 12px;
+}
+/* styling all buttons on the page */
+button{
+    background-color: blue;
+    color: white;
+    border: solid blue;
+    padding: 5px;
+}
+.postbtn{
+    padding: 10px;
+}
+td.shrtbtn button{
+    margin-top: -10px;
+    margin-left: 70px;
+    border-radius: 20px;
+    width: 60px;
+}
+.extbtn{
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+.extbtn a, .shrtbtn a, .postbtn a{
+    display: block;
+    color: #fff;
+}
+/* Social media icons styling */
+.icons{
+    margin-top: 40px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* fa icons styling */
+#fafa{
+    color:  grey;
+}
+.icon-box #fafa{
+    margin-top: 20px;
+    padding: 0 10px;
+}
+.icon-box2 #fafa{
+    margin-top: 20px;
+    padding: 0px 10px;
+}
+.icon-box3 #fafa{
+    margin-top: 50px;
+    padding: 0 10px;
+}
+.icon-box4 #fafa{
+    margin-top: 30px;
+    padding: 0 10px;
+}
+.iconright i{
+    margin-left: 250%;
+    color:  grey;
+}
+
+/*  website responsiveness
+    Break-points
+    desktop 1200px/1366px
+    laptop 992px
+    tablet 768px
+    mobile 576px
+*/
+
+@media screen and (max-width:1200px) {
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+}
+@media screen and (max-width:768px) {
+    body{
+        font-size: 3vw;
+    }
+    img{
+        width:500px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    aside{
+        display: grid;
+        justify-content: center;
+        margin: -5px 10px 5px;
+    }
+    article{
+        margin: 0 10px 20px;
+    }
+    main{
+        margin: 0 10px 10px;
+    }
+    section{
+        margin: 10px;
+    }
+    footer{
+        margin: -10px 10px 15px;
+    }
+    .pro h2{
+        font-size: 3vw;
+    }
+    span{
+        font-size: 2vw;
+    }
+    aside h3{
+        text-align: center;
+    }
+    td.shrtbtn button{
+        margin-top: -50px;
+        margin-left: 260%;
+        width: 70px;
+        padding: 0px;
+    }
+    .iconright i{
+        display: none;
+    }
+    nav .navbar .links{
+        display: none;
+        
+    }
+    nav .navbar{
+        display: flex;
+        justify-content: space-around;
+        padding: 0 0px 0 0;
+    }
+}
